@@ -2,13 +2,12 @@
 
 <html>
 <head>
-	<title>Upcoming Red Line Trains</title>
+	<title>Messages</title>
 	<script>
 		request = new XMLHttpRequest();
 
 		// Step 1: Make request
-		request.open("GET", "https://sheltered-forest-5520.herokuapp.com/redline.json", true);
-		// NOTE: The original source of the data: http://developer.mbta.com/lib/rthr/red.json
+		request.open("GET", "https://messagehub.herokuapp.com/messages.json", true);
 
 		// No, the following will NOT WORK!  *Can you explain why?*
 		//request.open("GET", "http://developer.mbta.com/lib/rthr/red.json", true);
@@ -25,10 +24,10 @@
 			if (request.readyState == 4 && request.status == 200) {
 				result = "";
 				raw = request.responseText;
-				theScheduleData = JSON.parse(raw);
+				messages = JSON.parse(raw);
 				elem = document.getElementById("list");
-				for (i = 0; i < theScheduleData["TripList"]["Trips"].length; i++) {
-					result += "<p>Next Red Line train to " + theScheduleData["TripList"]["Trips"][i]["Predictions"][0]["Stop"] + ", " + theScheduleData["TripList"]["Trips"][i]["Destination"] + " bound, will come in " + theScheduleData["TripList"]["Trips"][i]["Predictions"][0]["Seconds"] + " seconds</p>";
+				for (i = 0; i < messages.length; i++) {
+					result += "<p>" + messages[i]["username"] + " said " + messages[i]["content"] + "</p>";
 				}
 				elem.innerHTML = result;
 			}
@@ -40,7 +39,7 @@
 </head>
 
 <body>
-	<h1>Upcoming Red Line Trains</h1>
+	<h1>Messages</h1>
 	<div id="list">Nothing to show...</div>
 </body>
 </html>
