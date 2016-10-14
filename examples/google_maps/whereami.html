@@ -7,19 +7,18 @@
 	var lat = -99999;
 	var lng = -99999;
 	function getLocation() {
-		console.log("Fizz");
+		console.log("Hit me 1");
 		navigator.geolocation.getCurrentPosition(function(pos) {
-			console.log("Buzz");
+			console.log("Hit me 2");
+
 			lat = pos.coords.latitude;
 			lng = pos.coords.longitude;
 			printLocation();
-		});
-		console.log("FizzBuzz");
-		
+		});	
+		console.log("Hit me 3");
 	}
 
 	function printLocation() {
-		console.log("Foo");
 		elem = document.getElementById("location");
 		elem.innerHTML = "<p>" + lat + ", " + lng + "</p>";
 	}

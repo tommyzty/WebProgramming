@@ -193,3 +193,20 @@
     - Storage constraints (e.g., cookies, local storage)
     - Security issues (e.g., same origin policy)
     - View source
+
+#Tuesday, October 18th: Persistence with Cookies and Local Storage
+* Last class: XMLHttpRequest, JSON, limits of client-side JavaScript
+* Last class: S.O.P. in client-side JavaScript
+* AdBlock
+* Today: storing data over time
+* What can't we do, knowing the limitations of client-side JavaScript.
+* What we have learned so far in this course: key-value pairs
+* Two basic storage mechanisms on the client-side: cookies, local storage
+* Cookies: 4 KB max, there is a max number of cookies per domain
+* Local storage: ~5 MB per domain
+* Examples
+
+#Thursday, October 20th: jQuery
+* Local storage example (Hacker Stream)
+* jQuery examples
+* What's the point of jQuery?
