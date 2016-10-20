@@ -208,6 +208,22 @@
 * Examples
 
 #Thursday, October 20th: jQuery
+* Local storage vs session storage: http://stackoverflow.com/questions/5523140/html5-local-storage-vs-session-storage
 * Local storage example (Hacker Stream)
+* How I designed Assignment 2
+  - Your responsibility to deal with errors
+  - Some flexibility
+  - Some open-endedness, force you to ask questions
+  - More than one acceptable way to solve the problem, deal with engineering tradeoffs
+  - Opportunities for the future
+    - Show moving trains on map
+    - Countdown clock on schedule
+    - Show actual path from your location to closest station
 * jQuery examples
 * What's the point of jQuery?
+  - Write shorter code
+  - Don't need to deal with brower incompatibility issues
+* But why did we learn JS first?!?!?
+  - Need basic vocabulary
+  - How $() works => DOM
+  - How $.ajax, $.get, $.post all work => XHR
