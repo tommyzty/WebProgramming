@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1"/>
+<link rel="stylesheet" href="../stylesheets/style.css" />
+<title>COMP 20: Web Programming - Lab: Getting Started with the Server Side using Node.js and Heroku</title>
+</head>
+
+<body>
+<h1>COMP 20: Web Programming</h1>
+<h2>Lab: The Server Side using Node.js and Heroku</h2>
+
+<p class="note">This lab is worth 5 points.</p>
+
+<h2>Lab Objectives</h2>
+<ul>
+<li>Set up your workstation properly to use Node.js, MongoDB, and Heroku.</li>
+<li>Build a simple server-side web application and deploy it to Heroku.  This web application shall also be used for Assignment 3.</li>
+<li>Understand how a web server serves dynamic and static content.</li>
+</ul>
+
+<h2>Overview</h2>
+<p>Server-side development is a lot more involved than what we have been doing so far and requires a number of components and software including Node.js and MongoDB (database).  You will be using a database in Assignment 3 but not in this lab.</p>
+<p>For this class, we will deploy our server-side web application to Heroku.  Why use Heroku you may ask?  With Heroku, we do not need to worry about the server hardware, server configuration, and server maintenance.  Server configuration and maintenance require an extraodinary amount of work --just ask my Web Enginering students what they had to go through when they were thrown into the fire to use Amazon EC2 (part of the Amazon Web Services family, or AWS for short).  For a more elaborate discussion on Heroku vs Amazon AWS, see <a href="http://stackoverflow.com/questions/9802259/why-do-people-use-heroku-when-aws-is-present-whats-distinguishing-about-heroku" target="_blank">http://stackoverflow.com/questions/9802259/why-do-people-use-heroku-when-aws-is-present-whats-distinguishing-about-heroku</a>.</p>
+
+<h2>Software Installation Option 1 (required for Windows, strongly recommended for Mac users):</h2>
+<p>Use the <a href="http://www.cs.tufts.edu/comp/20/vm/">virtual machine (VM).</a>  You will also need to install the Heroku toolbelt on the VM on your own.</p>
+
+<h2>Software Installation Option 2: For Advanced Mac OS X Users</h2>
+<p>If you are a Mac user and choose not to use a virtual machine, install Node.js, Mongo DB, and the Heroku toolbelt via <a href="http://brew.sh/" target="_blank">Homebrew</a>: <code>brew install node mongo heroku-toolbelt</code>.</p>
+
+<h2>Software Installation Option 3: For Linux Users</h2>
+<p>Install Node.js using directions at <a href="https://github.com/nodejs/node-v0.x-archive/wiki/Installing-Node.js-via-package-manager" target="_blank">https://github.com/nodejs/node-v0.x-archive/wiki/Installing-Node.js-via-package-manager</a>.  Then, install MongoDB using directions at <a href="https://docs.mongodb.org/manual/administration/install-on-linux/" target="_blank">https://docs.mongodb.org/manual/administration/install-on-linux/</a>.</p>
+
+<h2 class="note">Important Notes</h2>
+<ul>
+	<li>Do NOT do this lab or Assignment 3 inside of your private GitHub repository!</li>
+	<li>If you install Node.js via Homebrew on Mac, use <code>node</code> to run Node.js (e.g., <code>node index.js</code>).  On the virtual machine or on Linux, use <code>nodejs</code> to run Node.js (e.g., <code>nodejs index.js</code>).</li>
+</ul>
+
+<h2>Instructions, Part I: Preliminaries</h2>
+<ol>
+<li>Create a Heroku account: <a href="http://www.heroku.com/" target="_blank">http://www.heroku.com/</a> (free)</li>
+<li>In order to use MongoDB via addon in a web application on Heroku, you will need to verify your Heroku account via of a credit card. You will not be billed. The reason for this is to verify that you are a human, and not a spammer.  If you do not have a credit card or not comfortable with using one, an alternative option is to buy and use prepaid credit card.</li>
+<li>Follow the instructions at <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction" target="_blank">https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction</a> up to and including the "Provision add-ons" section. <span class="note">IMPORTANT: Be careful in the "Scale the app" section.  I suggest you skip the section because if you are not careful, you will be billed and we will not be responsible for your actions!</span></li>
+<li>Please read the README for the <code>node-js-getting-started</code> example on GitHub: <a href="https://github.com/heroku/node-js-getting-started" target="_blank">https://github.com/heroku/node-js-getting-started</a></li>
+</ol>
+
+<h2>Instructions, Part II: Serving the MBTA Red Line Real-Time JSON Data</h2>
+<p>In Assignment 2, I gave you a URL to the JSON real-time data feed of MBTA Red Line subway trains: <code>https://rocky-taiga-26352.herokuapp.com/redline.json</code>.  I will be deleting what I provided that serves the JSON data feed.  Therefore, your map will no longer work.  To make your map work again, you must recreate the server-side.</p>
+
+<p>I can tell you how my JSON data feed actually worked: it pulls the data from <code>http://developer.mbta.com/lib/rthr/red.json</code>, the original source.  In other words, what you used in the last lab was a mirror of what is provided by the MBTA.  However, I added one thing that allowed one to directly access my JSON data feed from client-side JavaScript.  You see, if you simply change <code>https://powerful-depths-66091.herokuapp.com/redline.json</code> to <code>http://developer.mbta.com/lib/rthr/red.json</code> in your last lab, your map will still not work because of a fundamental security principle in client-side JavaScript: the Same Origin Polcy (SOP).</p>
+
+<p>Modify <code>index.js</code> in your <code>node-js-getting-started</code> so that it serves the real-time JSON data from the MBTA website file when one accesses the route <code>GET /redline.json</code>.  Example: accessing <code>https://[YOUR_APP_IDENTIFIER_RANDOMLY_GENERATED].herokuapp.com/redline.json</code> on a web browser shall return a JSON string, the contents of the original source of the JSON data feed <code>http://developer.mbta.com/lib/rthr/red.json</code>.  Important: Cross-Origin Resource Sharing must be enabled for <code>GET /redline.json</code>.</p>
+
+<p>Once you have completed this, all you need to do is to change the URL <code>https://rocky-taiga-26352.herokuapp.com/redline.json</code> to <code>https://NAMEOFYOURHEROKUAPP.herokuapp.com/redline.json</code> in your Assignment 2 and your map should work again.  This time, there should be no intermittent 404 errors too.  If your map does not work, or if JavaScript changes are required to your previous work, then something is wrong with your server.</p>
+
+<p>For this part of the lab, you are allowed to use additional Node.js modules although you really do not need to.  You are strongly urged to continue building upon <code>node-js-getting-started</code> for your Assignment 3.  If you want to start a new repository on Heroku for your Assignment 3, you will also need to add me as a collaborator for that new Heroku app.</p>
+
+<h2>The <code>README</code> File</h2>
+<p>Modify the <code>README.md</code> file in <code>node-js-getting-started</code> that describes your modifications. This description must:</p>
+<ol>
+<li>Identify what aspects of the work have been correctly implemented and what have not.</li>
+<li>Identify anyone with whom you have collaborated or discussed the assignment.</li>
+<li>Say approximately how many hours you have spent completing the assignment.</li>
+</ol>
+
+<h2>Submitting the Lab</h2>
+<p>Add me as a collaborator (using my email address <code>mchow[AT]cs[DOT]tufts[DOT]edu</code>) for your web application in Heroku.  You can do this by logging on to Heroku, go to the dashboard for your web application, under "Access", click on the "Add collaborator" button, enter my email address, and click "Save changes".</p>
+
+<h2>Assessment</h2>
+<ul>
+	<li>(1 point) Heroku web application is shared with me, working URL</li>
+	<li>(3 points) Web application serves <code>GET /redline.json</code> with cross-origin resource sharing (CORS) enabled.</li>
+	<li>(1 point) Modify your Assignment 2 so that it uses your new Heroku URL and not <code>https://rocky-taiga-26352.herokuapp.com/redline.json</code>.  You must make modifications in your private GitHub repository and push your changes.</li>
+	<li class="note">No credit will be given if accessing web application results in an "Application Error"</li>
+</ul>
+
+</body>
+</html>
