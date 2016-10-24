@@ -4,24 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1"/>
 <link rel="stylesheet" href="../stylesheets/style.css" />
-<title>COMP 20: Web Programming - Lab: Getting Started with the Server Side using Node.js and Heroku</title>
+<title>COMP 20: Web Programming - Lab: The Server Side using Node.js and Heroku</title>
 </head>
 
 <body>
 <h1>COMP 20: Web Programming</h1>
 <h2>Lab: The Server Side using Node.js and Heroku</h2>
 
-<p class="note">This lab is worth 5 points.</p>
+<p class="note">This lab is worth 5 points.  This lab is due on November 3rd.</p>
 
 <h2>Lab Objectives</h2>
 <ul>
 <li>Set up your workstation properly to use Node.js, MongoDB, and Heroku.</li>
-<li>Build a simple server-side web application and deploy it to Heroku.  This web application shall also be used for Assignment 3.</li>
+<li>Build a simple server-side web application and deploy it to Heroku.  This web application should also be used for Assignment 3.</li>
 <li>Understand how a web server serves dynamic and static content.</li>
 </ul>
 
 <h2>Overview</h2>
-<p>Server-side development is a lot more involved than what we have been doing so far and requires a number of components and software including Node.js and MongoDB (database).  You will be using a database in Assignment 3 but not in this lab.</p>
+<p>Server-side development is more involved than what we have been doing so far and requires a number of components and software including Node.js and MongoDB (database).  You will be using a database in Assignment 3 but not in this lab.</p>
 <p>For this class, we will deploy our server-side web application to Heroku.  Why use Heroku you may ask?  With Heroku, we do not need to worry about the server hardware, server configuration, and server maintenance.  Server configuration and maintenance require an extraodinary amount of work --just ask my Web Enginering students what they had to go through when they were thrown into the fire to use Amazon EC2 (part of the Amazon Web Services family, or AWS for short).  For a more elaborate discussion on Heroku vs Amazon AWS, see <a href="http://stackoverflow.com/questions/9802259/why-do-people-use-heroku-when-aws-is-present-whats-distinguishing-about-heroku" target="_blank">http://stackoverflow.com/questions/9802259/why-do-people-use-heroku-when-aws-is-present-whats-distinguishing-about-heroku</a>.</p>
 
 <h2>Software Installation Option 1 (required for Windows, strongly recommended for Mac users):</h2>
@@ -31,7 +31,7 @@
 <p>If you are a Mac user and choose not to use a virtual machine, install Node.js, Mongo DB, and the Heroku toolbelt via <a href="http://brew.sh/" target="_blank">Homebrew</a>: <code>brew install node mongo heroku-toolbelt</code>.</p>
 
 <h2>Software Installation Option 3: For Linux Users</h2>
-<p>Install Node.js using directions at <a href="https://github.com/nodejs/node-v0.x-archive/wiki/Installing-Node.js-via-package-manager" target="_blank">https://github.com/nodejs/node-v0.x-archive/wiki/Installing-Node.js-via-package-manager</a>.  Then, install MongoDB using directions at <a href="https://docs.mongodb.org/manual/administration/install-on-linux/" target="_blank">https://docs.mongodb.org/manual/administration/install-on-linux/</a>.</p>
+<p>Install Node.js using directions at <a href="https://github.com/nodejs/node-v0.x-archive/wiki/Installing-Node.js-via-package-manager" target="_blank">https://github.com/nodejs/node-v0.x-archive/wiki/Installing-Node.js-via-package-manager</a>.  Then, install MongoDB using directions at <a href="https://docs.mongodb.org/manual/administration/install-on-linux/" target="_blank">https://docs.mongodb.org/manual/administration/install-on-linux/</a>.  Finally, install Heroku toolbelt.</p>
 
 <h2 class="note">Important Notes</h2>
 <ul>
