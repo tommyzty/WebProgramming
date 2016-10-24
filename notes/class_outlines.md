@@ -250,7 +250,9 @@
   9. Handle a lot of requests
   10. Build HTML data on the fly
   11. Be available all the time (well, almost)
-* Implementation: Node.js => write server-side programs using JavaScript
+* Implementation 1 (ugly): Node.js => write server-side programs using JavaScript
+* Implementation 2 (cleaner using Express framework)
+* Semester group project teammates
   
 #Tuesday, October 27th: Server-Side (continued), Frameworks
 * Last class: web server
