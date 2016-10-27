@@ -254,14 +254,21 @@
 * Implementation 2 (cleaner using Express framework)
 * Semester group project teammates
   
-#Tuesday, October 27th: Server-Side (continued), Frameworks
-* Last class: web server
-* Architecture in the real world: https://www.acunetix.com/websitesecurity/web-applications/
+#Thursday, October 27th: Server-Side (continued), Frameworks
+* Last class: the server side, Node.js, Express
 * Option A: https://github.com/tuftsdev/WebProgramming/blob/gh-pages/examples/nodejs/server.js
 * Option B: https://github.com/tuftsdev/WebProgramming/blob/gh-pages/examples/nodejs/simpleexpress/app.js
+* General form of a method in Express.js
+* The `express`, `request`, and `response` objects
+* The `package.json` and `Procfile`
 * A good framework:
   1. Don't reinvent the wheel
   2. Most of the important ideas are already built for you
   3. Shorten code
   4. Add-on modules that you need.  For all web applications developed using Express.js, a file `package.json` is required.  The file is a list of requirements / dependencies for the web application.  Think of this as the ingredients for a recipe.  Then install all the requirements / dependencies via `npm install`
-* General form of a method in Express.js:
+* Heroku and pushing your application to Heroku
+* Assignment 3
+* An old friend...
+
+#Tuesday, November 1st: MongoDB
+* Architecture in the real world: https://www.acunetix.com/websitesecurity/web-applications/
