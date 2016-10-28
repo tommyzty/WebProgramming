@@ -2,7 +2,15 @@
 var express = require('express');
 var app = express();
 
+/* General form:
+
+app.HTTP_VERB('ROUTE', function(request, response) {
+	// Do something
+});
+*/
+
 app.get('/', function(request, response) {
+	console.log(request);
 	response.send("Hello world");
 });
 
