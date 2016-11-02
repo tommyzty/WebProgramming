@@ -20,6 +20,13 @@ app.post('/sendMessage', function(request, response) {
 	response.send("Thanks for playing!");
 });
 
+app.get('/fakelogin', function(request, response) {
+	theUsername = request.query.username;
+	thePassword = request.query.password;
+	console.log("Someone is trying to log in: " + theUsername + ":" + thePassword);
+	response.send(200);
+});
+
 app.get('/', function(request, response) {
 	response.send(500);
 });
