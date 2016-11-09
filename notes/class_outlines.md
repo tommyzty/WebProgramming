@@ -291,6 +291,28 @@
 * Example: https://github.com/tuftsdev/WebProgramming/tree/gh-pages/examples/nodejs/nodemongoapp.  Feel free to copy and use initialization code.  It will help you big time!
 * A fine point: data sent to a web server is always text!
 
-#Future
+#Thursday, November 11th: Loose Ends
+* Node.js + MongoDB
+* Difference between MongoDB commands and MongoDB commands via Node.js MongoDB driver
+* The "trivial" questions --or so you thought...
+* Watchman
+* What happened during the break:
 * "I’ve Just Liberated My Modules" https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c#.aandh88ud. Discussion on Hacker News: https://news.ycombinator.com/item?id=11340510
 * "NPM & left-pad: Have We Forgotten How To Program?" http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/. Discussion on Hacker News: https://news.ycombinator.com/item?id=11348798
+
+#Tuesday, November 15th: Web Security, Part 1
+* Recall: data sent to a web server is always text!
+* Revisiting `nodemongoapp`
+* There's something wrong with it. What if...
+* Cross-Site Scripting (XSS): what is it, why is it so bad, and where to attack?
+* https://www.veracode.com/security/xss
+* Security 101: never trust user input from a client
+* Awareness:
+  1. OWASP Top 10 list: https://www.owasp.org/index.php/Top_10_2013-Top_10
+  2. CWE/SANS TOP 25 Most Dangerous Software Errors: https://www.sans.org/top25-software-errors/
+* Defending against XSS
+  * See `nodemongoexample`
+* Playground: http://www.cs.tufts.edu/comp/20/hackme.php
+* Bypassing client-side validation using a proxy
+* How bad is this problem? http://www.slideshare.net/elie-bursztein/lessons-learned-while-protecting-gmail
+* The moral of the story...
