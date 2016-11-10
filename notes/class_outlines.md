@@ -294,8 +294,9 @@
 #Thursday, November 11th: Loose Ends
 * Node.js + MongoDB
 * Difference between MongoDB commands and MongoDB commands via Node.js MongoDB driver
+* To understand Assignment 3, draw it out.
 * The "trivial" questions --or so you thought...
-* Watchman
+* Postman
 * What happened during the break:
 * "I’ve Just Liberated My Modules" https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c#.aandh88ud. Discussion on Hacker News: https://news.ycombinator.com/item?id=11340510
 * "NPM & left-pad: Have We Forgotten How To Program?" http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/. Discussion on Hacker News: https://news.ycombinator.com/item?id=11348798
