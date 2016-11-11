@@ -30,8 +30,11 @@ app.post('/feedme', function(request, response) {
 		"food": food,
 	};
 	db.collection('fooditems', function(error, coll) {
-		var id = coll.insert(toInsert, function(error, saved) {
+		console.log("Error: " + error);
+		coll.insert(toInsert, function(error, saved) {
+			console.log("Saved: "+ saved);
 			if (error) {
+				console.log("Error: " + error);
 				response.send(500);
 			}
 			else {
