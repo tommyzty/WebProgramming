@@ -316,7 +316,9 @@
 * The moral of the story...
 
 #Thursday, November 17th: Web Security, Part 2
+* A common programming mistake I have observed in many people's assignment 3...
 * Last class: cross-site scripting (XSS) and web security 101
 * Playground: http://www.cs.tufts.edu/comp/20/hackme.php
 * Bypassing client-side validation using a proxy
-* Injection attacks
+* Case study: "How to buy a 65” Plasma for $.99" http://www.edgeblog.net/2006/how-to-buy-a-plasma-for-99/
+* Database injection attack in MongoDB
