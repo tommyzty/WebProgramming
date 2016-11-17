@@ -316,6 +316,13 @@
 * The moral of the story...
 
 #Thursday, November 17th: Web Security, Part 2
+* Announcements
+  - Tuesday?
+  - Susan Landau visit on Monday, November 21st
+  - Quiz 3 moved to Tuesday, December 6th
+  - Technical Competency Day on Thursday, December 1st
+  - Status reports for each teams due tomorrow (short)
+  - Checkups
 * A common programming mistake I have observed in many people's assignment 3...
 * Last class: cross-site scripting (XSS) and web security 101
 * Playground: http://www.cs.tufts.edu/comp/20/hackme.php
